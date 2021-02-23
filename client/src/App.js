@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Navbar />
-      <div className="App">
+      <div>
         <div className="App-header">
           <h2>Welcome to LosMan Reviews</h2>
         </div>
@@ -14,7 +15,8 @@ function App() {
           Check out reviews on Horror Movies old and new, domestic an foreign!
         </p>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 

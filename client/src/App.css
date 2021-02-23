@@ -1,16 +1,14 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/background/pexels-cottonbro-5427202.jpg);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
   color: white;
 }
 
@@ -18,7 +16,3 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
