@@ -1,21 +1,50 @@
-import React, { Component } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import Home from "./components/Home"
+import Disturbing from "./components/Disturbing"
+import Great from "./components/Great"
+import Bad from "./components/Bad"
+import Faces from "./components/Faces"
+import Slasher from "./components/Slasher"
+import Black from "./components/Black"
+import Century from "./components/Century"
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <div>
-        <div className="App-header">
-          <h2>Welcome to LosMan Reviews</h2>
-        </div>
-        <p className="App-intro">
-          Check out reviews on Horror Movies old and new, domestic an foreign!
-        </p>
-      </div>
-      <Footer />
+      <Router>
+        <Navbar />
+          <Switch>
+            <Route exact path={["/", "/home"]}>
+              <Home />
+            </Route>
+            <Route path="/disturbing">
+              <Disturbing />
+            </Route>
+            <Route path="/greathorror">
+              <Great />
+            </Route>
+            <Route path="/badhorror">
+              <Bad />
+            </Route>
+            <Route path="/facesofdeath">
+              <Faces />
+            </Route>
+            <Route path="/slashers">
+              <Slasher />
+            </Route>
+            <Route path="/blackcomedies">
+              <Black />
+            </Route>
+            <Route path="/21sthorror">
+              <Century />
+            </Route>
+          </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }
